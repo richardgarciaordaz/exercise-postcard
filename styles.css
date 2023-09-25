@@ -3,7 +3,6 @@ body {
 }
 
 * {
-	border: 1px dashed red;
 	min-height: 10px;
 }
 p {
@@ -13,8 +12,8 @@ p {
 .postcard {
 	background-color: white;
 	width: 400px;
-	height: 300px;
 	margin: auto;
+	padding: 10px;
 }
 
 .postcard-header {
@@ -27,12 +26,13 @@ p {
 }
 
 .postcard-header h1 {
-	width: 225px;
+	width: 400px;
 	margin: 9px;
 }
 
 .postcard-body {
 	display: flex;
+	flex-direction: row;
 }
 
 .body-left p:first-child {
@@ -42,6 +42,7 @@ p {
 .body-left,
 .body-right {
 	padding: 10px;
+	flex: 1;
 }
 
 input {
@@ -58,7 +59,14 @@ p {
 }
 
 button {
-	background-color: black;
-	padding: 20px;
+	background-color: grey;
+	color: black;
+
+	padding: 10px;
 }
-git push origin main
+.body-left {
+	padding: 10px;
+	display: flex;
+	flex-direction: column; /* Añadido para apilar elementos verticalmente */
+	align-items: center; /* Añadido para centrar horizontalmente */
+}
